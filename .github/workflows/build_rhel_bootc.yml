@@ -34,8 +34,8 @@ jobs:
       # Destination registry for built images
       DEST_REGISTRY_HOST: "ghcr.io"
       # Destination credentials - uses platform variables and secrets
-      # DEST_REGISTRY_USER: "${{ github.actor }}"
-      # DEST_REGISTRY_PASSWORD: "${{ secrets.GITHUB_TOKEN }}"
+      DEST_REGISTRY_USER: "${{ github.actor }}"
+      DEST_REGISTRY_PASSWORD: "${{ secrets.GITHUB_TOKEN }}"
 
     container:
       image: registry.access.redhat.com/ubi9/ubi
