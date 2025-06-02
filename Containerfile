@@ -20,7 +20,7 @@ dnf -y install httpd && dnf clean all
 systemctl enable httpd
 mv /var/www /usr/share/www
 sed -ie 's,/var/www,/usr/share/www,' /etc/httpd/conf/httpd.conf
-echo "Welcome!" > /usr/share/www/html/index.html
+echo "Welcome to the San Diego RHUG!" > /usr/share/www/html/index.html
 
 EORUN
 
