@@ -1,6 +1,6 @@
 MAINTAINER Tony Harris <toharris@redhat.com>
 
-FROM registry.redhat.io/rhel9/rhel-bootc:9.5
+FROM registry.redhat.io/rhel9/rhel-bootc:9.6
 
 #install software
 RUN dnf -y install tmux mkpasswd
