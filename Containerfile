@@ -3,13 +3,14 @@ MAINTAINER Tony Harris <toharris@redhat.com>
 FROM registry.redhat.io/rhel9/rhel-bootc:9.6
 
 #install software
-RUN dnf -y install mkpasswd
+#RUN dnf -y install mkpasswd
 
 #configure bootc-user
-RUN pass=$(mkpasswd --method=SHA-512 --rounds=4096 redhat) && useradd -m -G wheel bootc-user -p $pass
+#RUN pass=$(mkpasswd --method=SHA-512 --rounds=4096 redhat) && useradd -m -G wheel bootc-user -p $pass
 
 #setup sudo to not require password
-RUN echo "%wheel        ALL=(ALL)       NOPASSWD: ALL" > /etc/sudoers.d/wheel-sudo
+#RUN echo "%wheel        ALL=(ALL)       NOPASSWD: ALL" > /etc/sudoers.d/wheel-sudo
+
 
 #Using the optional heredoc format to help simplify the number of times we call RUN
 RUN <<EORUN
